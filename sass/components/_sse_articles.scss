@@ -30,6 +30,13 @@ header.article-header {
 		margin-top: -4px;
 	}
 
+	// Vertical Tablets
+	@include breakpoint(tablet-V) {
+		.timestamp {
+			font-size: emCalc(14px);
+		}
+	}
+
 }
 
 // Article Paragraphs & Img's
@@ -39,8 +46,23 @@ article p {
 	font-family: $serifFontFamily;
 	font-size: emCalc(20px);
 	line-height: emCalc(30px);
+
+	// Vertical Tablets
+	@include breakpoint(tablet-V) {
+		font-size: emCalc(18px);
+		line-height: emCalc(28px);
+	}
 }
 .article-image {
 	@extend .clearfix;
 	margin-bottom: 12px;
+}
+
+
+
+
+// Article Snippet
+// ---------------
+.article-snippet {
+	@include fade-V-B;
 }
